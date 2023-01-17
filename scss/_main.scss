@@ -1,0 +1,533 @@
+:root {
+    --swiper-theme-color: #ffd153;
+}
+
+//容器設定
+.body{
+    position: relative;
+
+}
+.container-fluid{
+    max-width: 1600px;
+    margin: 0 auto;
+    overflow: hidden;
+    @include pad{
+        padding-bottom: 50px;
+    }
+}
+.container{
+    max-width: 1220px;
+    margin: 0 auto;
+}
+
+
+//LOGO & 右上角BUTTON
+.nav{
+    margin-top: 30px;
+    @include mobile{
+        margin-top: 0px;
+    }
+    @include pad{
+        border-bottom: 2px solid #FFD153;
+    }
+    
+    .header{
+        justify-content: space-between;
+        @include pad{
+            padding: 0px 20px 30px;
+            align-items: center;
+
+        }
+        @include mobile{
+            padding: 20px;
+            align-items: center;
+        }
+        img{
+            max-width: 200px;
+            @include pad{
+                z-index: 2;
+            }
+            @include mobile{
+                width: 160px;
+                margin-top: 5px
+            }
+        }
+        button{
+            background-color: red;
+            @include button;
+            @include pad{
+                width: 180px;
+                padding: 15px 0px;
+                font-size: $text-s+1px;
+            }
+            @include mobile{
+                width: 160px;
+                padding: 10px 0px;
+                font-size: $text-s;
+            }
+            a{
+                color: white;
+                padding: 10px 35px;
+            }
+        }
+        
+    }
+}
+
+
+
+//主頁第一區塊
+.content{
+    padding: 100px 0px;
+    @include pad{
+        flex-direction: column;
+        padding: 15px;
+    }
+    @include mobile{
+        flex-direction: column;
+        padding: 30px 0px;
+    }
+}
+
+.home-bg{
+    width: 1000px;
+    position: absolute;
+    right: 0px;
+    z-index: 1;
+    @include pad{
+        display: none;
+    }
+.home-bgsm{
+    display: none;
+    @include pad{
+        display: block;
+        z-index: 0;
+        width: 90%;
+        margin-left: 5%;
+    }
+    @include mobile{
+        width: 90%;
+    }
+
+
+
+   
+}
+
+
+}
+.home-textbox, .home-picbox {
+    width: 50%;
+    @include pad{
+       width: 100%;
+    }
+}
+
+.home-textbox{
+    padding: 150px 0px;
+    @include pad{
+        padding: 0px 20px;
+     }
+    h1{
+        font-size: $text-l;
+        margin: 30px 0px;
+        margin-left: -5px;
+    }
+    p{
+        font-size: $text-s +2px;
+        color: $gray-color;
+        @include mobile{
+            padding-top: 10px;
+        }
+    }
+    h5{
+        font-size: $text-s +4px;
+    }
+}
+.home-picbox{
+    z-index: 2;
+    padding: 70px 10px 0px 10px;
+    text-align: center;
+    .home-bgman{
+        max-width: 600px;
+        position: absolute;
+        right: 150px;
+        @include pad{
+            z-index: 2;
+            left: 15%;
+        }
+        
+    }
+}
+
+
+
+//背景擺入圓形
+.ball01{
+    position: relative;
+    img{
+        position: absolute;
+        bottom: -200px;
+        left: -370px;
+    }
+}
+.ball02{
+    position: relative;
+    z-index: 0;
+    img{
+        position: absolute;
+        top: -170px;
+        right: -250px;
+        @include mobile{
+            top: -150px;
+            right: -150px;
+        }
+    }
+
+}
+.ball03{
+    position: absolute;
+    top: 50px;
+    left: -50px;
+    z-index: 0;
+}
+
+
+
+
+
+
+//第二區塊 社交平台區域
+.platform{
+    .platform-title{
+        font-size: $text-m;
+        margin-top: 100px;
+        @include mobile{
+            margin: 20px;
+        }
+    }
+    
+    .platform-card{
+        padding: 70px 70px 100px 70px;
+        @include mobile{
+            padding: 30px;
+        }
+        h5{
+            font-size: $text-s +8px;
+            margin: 30px 0px;
+        }
+        h6{
+            font-size: $text-s;
+            color: $gray-color;
+            @include mobile{
+                padding: 0px 100px;
+            }
+        }
+        img{
+            width: 90px;
+            height: 90px;
+        }
+    }
+}
+
+
+
+//角色區塊(活動主、創作者.....等)
+.role{
+    .role-title{
+        font-size: $text-m;
+        @include mobile{
+            margin-top: 25px;
+        }
+    }
+    .role-p{
+        @include mobile{
+            font-size: 22px;
+            padding: 30px 40px 0px 40px;
+        }
+
+    }
+    .card-group{
+        @include mobile{
+           margin-top: 20px;
+           padding: 10px;
+        }
+        .role-card{
+            box-shadow: 0px 2px 10px #00000014;
+            width: 23%;
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: white;
+            z-index: 2;
+            line-height: 1.5rem;
+            @include mobile{
+                width: 70%;
+                margin: 15px auto;
+                font-size: $text-s;
+            }
+            h5{
+                color: $gray-color;
+                margin: 30px 0px 20px 0px;
+            }
+            .picbox{
+                width: 100%;
+    
+                margin: 0 auto;
+            }
+          
+        }
+        .role-text{
+            padding: 0px 25px 50px;
+        }
+    }
+    
+}
+
+//function區塊
+.function{
+    z-index: 3;
+    .move-t{
+        @include mobile{
+            margin-top: 0px;
+        }
+    }
+    .reverse{
+        @include mobile{
+            flex-direction: column-reverse;
+        }
+    }
+    .move-l{
+        margin-left: -20px;
+        @include mobile{
+            margin-left: 0px;
+        }
+    }
+    .move{
+        margin: 0 auto;
+
+    }
+    .function-card{
+        width: 230px;
+        height: 280px;
+        box-shadow: 0px 2px 10px #00000014;
+        border-radius: 12px;
+        overflow: hidden;
+        background-color: white;
+        z-index: 2;
+        line-height: 1.5rem;
+        margin: 20px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: center;
+        @include mobile{
+            width: 100%;
+            padding: 30px 90px;
+            margin: 20px 0px;
+            z-index: 3;
+        }
+        
+    }
+    .function-textbox{
+        width: 50%;
+        z-index: 3;
+        @include mobile{
+            text-align: center;
+            width: 100%;
+        }
+        h1{
+            font-size: $text-m;
+            line-height: 2.5rem;
+        }
+        p{
+            font-size: $text-s +2px;
+            line-height: 1.5rem;
+        }
+        button{
+            @include button;
+            background-color: #56C4C5;
+            padding: 10px 20px;
+            margin-top: 20px;
+            width: 25%;
+            @include mobile{
+                width: 30%;
+                margin: 30px auto;
+            }
+            a{
+                color: white;
+                padding: 10px 20px;
+                
+            }
+        }
+    }
+    .picbox{
+        width: 86px;
+        height: 86px;
+        border-radius: 100%;
+        box-shadow: 0px 2px 10px #00000014;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        img{
+            width: 52px;
+            height: 52px;
+            margin-left: 17px;
+            margin-top: 17px;
+
+        }
+    }
+    .function-text{
+        text-align: center;
+        h5{
+            margin: 15px;
+        }
+    }
+}
+
+
+//好評如潮區塊
+.comment{
+    img.ball03{
+        position: absolute;
+        left: -100px;
+        z-index: -100;
+    }
+    //滑動套件swiper
+    .swiper{
+        padding: 20px;
+    }
+    /* 將底部 pagination 分頁的 active 狀態改為想要的樣式 */
+    .swiper-pagination-bullet-active {
+        width: 20px;
+        border-radius: 8px;
+    }
+    
+    /* 讓分頁圓點移至下方 */
+    .swiper-pagination {
+        position: static;
+        margin-top: 24px;
+    }
+    .title{
+        h1{
+            font-size: $text-m;
+            text-align: center;
+            font-weight: bolder;margin-bottom: 30px;
+            @include mobile{
+                margin:30px 0px 50px 0px;
+            }
+        }
+        
+
+    }
+    
+    .comment-card{
+        box-shadow: 0px 2px 10px #00000014;
+        border-radius: 12px;
+        padding: 50px;
+        width: 30%;
+        margin: 80px 10px 40px 10px;
+        @include mobile{
+            width: 70%;
+            margin: 40px auto;
+        }
+        .picbox{
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            overflow: hidden;
+            margin-top: -100px;
+        }
+        p{
+            margin: 30px 0px;
+            line-height: 1.5rem;
+            letter-spacing: 1px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #DDDDDD;
+            
+        }
+        .textbox{
+            h5{
+                margin-bottom: 30px;
+                font-weight: bolder;
+            }
+            h6{
+                margin-top: 3px;
+            }
+            img{
+                margin: 0px 3px;
+            }
+        }
+    }
+
+}
+
+.footer{
+    margin-top: 20px;
+    text-align: center;
+    position: relative;
+    padding: 50px 0px;
+    // background-image: url("../images/home_footer.svg");
+    img{
+        width: 100%;
+    }
+    .footer-box{
+        position: absolute;
+        bottom: -20px;
+        width: 30%;
+        margin-left: 35%;
+        @include mobile{
+            width: 100%;
+            margin-left: 0px;
+            bottom: -70px;
+        }
+        h1{
+            font-size: $text-m;
+            @include mobile{
+            font-size:  24px;
+            }
+        }
+        button{
+            @include button;
+            background-color: #56C4C5;
+            padding: 10px 20px;
+            margin-top: 20px;
+            width: 150px;
+            margin: 50px 0px;
+            @include mobile{
+                margin: 20px 0px 70px 0px;
+                }
+            a{
+                color: white;
+            }
+        }
+        
+    }
+}
+
+.top{
+
+    border-radius: 100px;
+    // background-color: #DDDDDD;
+    // text-align: center;
+    a{  
+        padding: 22px 20px;
+        border-radius: 100%;
+        background-color: #DDDDDD;
+        font-size: 16px;
+        color: white;
+        position: fixed;
+        bottom: 10px;
+        right: 50px;
+        z-index: 100;
+
+    }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,130 @@
+//響應式斷點
+@mixin pad{
+    @media(max-width: 768px){
+        @content
+    }
+}
+@mixin mobile{
+    @media(max-width: 568px){
+        @content
+    }
+}
+//按鈕功能
+@mixin button{
+    z-index: 3;
+    text-align: center;
+    border: 0;
+    letter-spacing: 1px;
+    border-radius: 30px;
+    color: white;
+}
+
+
+*{
+    scroll-behavior: smooth;
+}
+.m-0a{
+    margin: 0 auto
+}
+
+//通用功能
+body{
+    font-family: 'Noto Sans TC', sans-serif;
+}
+.container,.container-fluid{
+    max-width:100%;
+    height: auto;
+}
+
+.d-flex{
+    display: flex;
+}
+.column{
+    flex-direction: column;
+}
+.column-sm{
+    @include mobile{
+        flex-direction: column;
+    }
+}
+.pos-rel{
+    position: relative;
+}
+.space-around{
+    justify-content: space-around;
+}
+.space-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+.space-evenly{
+    justify-content: space-evenly;
+}
+.justify-center{
+    justify-content: center;
+}
+.flex-end{
+    align-items: flex-end;
+}
+.baseline{
+    align-items: baseline;
+}
+.text-center{
+    text-align: center;
+}
+.font-w{
+    font-weight: bolder;
+}
+
+
+.pd-10{
+    padding: 10px 0px;
+}
+.pd-20{
+    padding: 20px 0px;
+}
+.pd-30{
+    padding: 30px 0px;
+}
+.pd-40{
+    padding: 40px 0px;
+}
+.pd-50{
+    padding: 50px 0px;
+}
+.pd-60{
+    padding: 60px 0px;
+}
+.pd-70{
+    padding: 70px 0px;
+}
+.pd-80{
+    padding: 80px 0px;
+}
+.pd-90{
+    padding: 90px 0px;
+}
+.pd-100{
+    padding: 100px 0px;
+}
+.pd-all-30{
+    padding: 30px;
+}
+
+.pdt-30px{
+    padding-top: 30px;
+}
+.pdt-50px{
+    padding-top: 50px;
+}
+.pdt-100px{
+    padding-top: 100px;
+}
+.mgt-30{
+    margin-top: 30px;
+}
+.h-40px{
+    height: 40px;
+}
